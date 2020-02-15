@@ -1,0 +1,24 @@
+{
+  "name": "clasp",
+  "dockerFile": "Dockerfile",
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "remoteUser": "dev",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace",
+  "mounts": [
+    "source=node_modules,target=/workspace/node_modules,type=volume"
+  ],
+  "postCreateCommand": "sudo chown dev node_modules",
+  "runArgs": [
+    "-v",
+    "${env:HOME}${env:USERPROFILE}/.ssh:/home/dev/.ssh:ro",
+    "-v",
+    "${env:HOME}${env:USERPROFILE}/.clasprc.json:/home/dev/.clasprc.json",
+  ]
+}
