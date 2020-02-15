@@ -1,18 +1,10 @@
 {
-  "compileOnSave": true,
   "compilerOptions": {
-    "esModuleInterop": true,
-    "target": "es2016",
-    "lib": [
-      "es2020"
-    ],
-    "strict": true,
-    "inlineSourceMap": true,
-    "moduleResolution": "node",
-    "module": "commonjs"
+    "sourceMap": true,
+    "target": "es5",
+    "module": "es2015",
+    "lib": ["ES2015"],
+    "esModuleInterop": true
   },
-  "include": [
-    "src/**/*.ts",
-    "tests/**/*.ts"
-  ]
+  "include": ["src/**/*.ts", "tests/**/*.ts", "scripts/**/*.ts"]
 }

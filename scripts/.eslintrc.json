@@ -1,0 +1,19 @@
+{
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "plugins": [],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parser": "espree",
+  "parserOptions": {},
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true,
+        "printWidth": 100
+      }
+    ]
+  }
+}

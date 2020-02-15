@@ -1,6 +1,6 @@
 {
-  "name": "gas-clasp-starter",
-  "version": "1.2.1",
+  "name": "%WORKSPACE_NAME%",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,7 @@
     "pull": "node scripts/pullGasProject.js",
     "lint": "eslint --fix src/**/*.ts",
     "test": "jest",
+    "test:watch": "jest --watch",
     "build": "webpack",
     "build:watch": "webpack --watch",
     "push": "npm run build && npx clasp push"
@@ -55,9 +56,7 @@
       "json",
       "node"
     ],
-    "globals": {
-      "Logger": {}
-    }
+    "globals": {}
   },
   "dependencies": {}
 }
