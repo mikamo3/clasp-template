@@ -1,5 +1,5 @@
 {
-  "name": "clasp",
+  "name": "%WORKSPACE_NAME%",
   "dockerFile": "Dockerfile",
   "extensions": [
     "dbaeumer.vscode-eslint",
@@ -12,7 +12,7 @@
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
   "workspaceFolder": "/workspace",
   "mounts": [
-    "source=node_modules,target=/workspace/node_modules,type=volume"
+    "source=%WORKSPACE_NAME%_node_modules,target=/workspace/node_modules,type=volume"
   ],
   "postCreateCommand": "sudo chown dev node_modules",
   "runArgs": [
